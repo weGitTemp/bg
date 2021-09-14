@@ -79,11 +79,17 @@
          "required": true,
          "value": ""
       },
-      "IBM_WATSON_CRED_URL": {
+       "API_HASH": {
+         "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
+         "required": true,
+      },
+       "value": ""
+        "DATABASE_URL": {
          "description": "This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
-         "required": false
-     },
-     "IBM_WATSON_CRED_PASSWORD": {
+         "required": true,
+         "value" : "postgres://uvcloojv:0sMHArOUQncS1fyNdddJ7dup6SEU9XsX@chunee.db.elephantsql.com/uvcloojv"
+      },
+       "IBM_WATSON_CRED_PASSWORD": {
         "description": "This is required for the speech to text module. Get your PASSWORD from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
         "required": false
      },
