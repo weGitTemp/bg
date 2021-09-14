@@ -75,41 +75,41 @@ def get_readable_time(seconds: int) -> str:
 INNEXIA_IMG = "https://telegra.ph/file/8b6f8f2bb4ff3912634c7.jpg"
 
 PM_START_TEXT = """
-`Heya` 🤗 `I am` **INNEXIA** `your group super bot`
-`I am very fast and  more efficient  I provide awesome  features which a owner will look for  filter ,warn system,note keeping system flood!`
+`ʜᴇʏᴀ` 🤗 `ɪ ᴀᴍ` **ɪɴꜰᴏʙʏᴛᴇ ʙᴏᴛ** `ʏᴏᴜʀ ɢʀᴏᴜᴘ ꜱᴜᴘᴇʀ ʙᴏᴛ`
+`ɪ ᴀᴍ ᴠᴇʀʏ ꜰᴀꜱᴛ ᴀɴᴅ  ᴍᴏʀᴇ ᴇꜰꜰɪᴄɪᴇɴᴛ  ɪ ᴘʀᴏᴠɪᴅᴇ ᴀᴡᴇꜱᴏᴍᴇ  ꜰᴇᴀᴛᴜʀᴇꜱ ᴡʜɪᴄʜ ᴀ ᴏᴡɴᴇʀ ᴡɪʟʟ ʟᴏᴏᴋ ꜰᴏʀ  ꜰɪʟᴛᴇʀ ,ᴡᴀʀɴ ꜱʏꜱᴛᴇᴍ,ɴᴏᴛᴇ ᴋᴇᴇᴘɪɴɢ ꜱʏꜱᴛᴇᴍ ꜰʟᴏᴏᴅ!`
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="❔Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ ❔", callback_data="help_back"),
+            text=" ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ᴄʜᴀᴛꜱ 🙂", url="http://t.me/Innexiabot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="🔥 Sᴏᴜʀᴄᴇ", url=f"https://github.com/DarkCybers/innexia"),
+        InlineKeyboardButton(text="ᴏɴᴡᴇʀ", url=f"http://t.me/Arpit_Chaurasiya"),
         InlineKeyboardButton(
-            text="Vᴄ Pʟᴀʏᴇʀ 🎶", url=f"https://telegra.ph/Innexia-Vc-Player-08-19"
+            text="ᴠᴄ ᴘʟᴀʏᴇʀ", url=f"https://telegra.ph/𝗕ooo-09-14-2"
         ),
     ],
     [
-        InlineKeyboardButton(text="📜 Aʙᴏᴜᴛ", callback_data="innexia_"),
+        InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/TechInfoByte"),
         InlineKeyboardButton(
-            text="Bᴀꜱɪᴄ Hᴇʟᴘ 👮", callback_data="innexia_basichelp"
+            text="ʙᴀꜱɪᴄ ʜᴇʟᴘ", callback_data="innexia_basichelp"
         ),
     ],
     [
-        InlineKeyboardButton(text="💕 Sᴜᴍᴍᴏɴ Mᴇ 💕", url="http://t.me/Innexiabot?startgroup=true"),
+        InlineKeyboardButton(text="ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅꜱ ❔", callback_data="help_back"),
     ],
 ]
 
 
 HELP_STRINGS = """
 **SETTINGS**
-`Click on the buttons below to get documentation about specific modules..`)"""
+`ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`)"""
 
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- @SiderzDonate's 💕"""
+ @Arpit_Chaurasiya 💕"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -224,7 +224,7 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/SiderzChat")]]
+                [[InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/TechInfoByte")]]
             ),
         )
         
@@ -310,7 +310,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back")]]
                 ),
             )
 
@@ -356,10 +356,10 @@ def innexia_about_callback(update, context):
     query = update.callback_query
     if query.data == "innexia_":
         query.message.edit_text(
-            text=""" 𝗜𝗡𝗡𝗘𝗫𝗜𝗔 - A bot to manage your groups with additional features!
-            \nHere's the basic help regarding use of Innexia.
+            text=""" 𝐓𝐞𝐚𝐜𝐡𝐈𝐧𝐟𝐨 - ᴀ ʙᴏᴛ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ ᴡɪᴛʜ ᴀᴅᴅɪᴛɪᴏɴᴀʟ ꜰᴇᴀᴛᴜʀᴇꜱ!
+            \nʜᴇʀᴇ'ꜱ ᴛʜᴇ ʙᴀꜱɪᴄ ʜᴇʟᴘ ʀᴇɢᴀʀᴅɪɴɢ ᴜꜱᴇ ᴏꜰ Teachinfo.
             
-            \nAlmost all modules usage defined in the help menu, checkout by sending `/help`
+            \nᴀʟᴍᴏꜱᴛ ᴀʟʟ ᴍᴏᴅᴜʟᴇꜱ ᴜꜱᴀɢᴇ ᴅᴇꜰɪɴᴇᴅ ɪɴ ᴛʜᴇ ʜᴇʟᴘ ᴍᴇɴᴜ, ᴄʜᴇᴄᴋᴏᴜᴛ ʙʏ ꜱᴇɴᴅɪɴɢ `/help`
             \nReport error/bugs click the Button""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -391,7 +391,7 @@ def innexia_about_callback(update, context):
             text=f"*Here's basic Help regarding* *How to use Me?*"
             f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n• After adding promote me manually with full rights for faster experience.\n"
-            f"\n• Than send `/admincache@InnexiaBot` in that chat to refresh admin list in My database.\n"
+            f"\n• Than send `/admincache` in that chat to refresh admin list in My database.\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -401,10 +401,6 @@ def innexia_about_callback(update, context):
                  [
                     InlineKeyboardButton(text="Aᴅᴍɪɴ", callback_data="innexia_admin"),
                     InlineKeyboardButton(text="Nᴏᴛᴇꜱ", callback_data="innexia_notes"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", callback_data="innexia_support"),
-                    InlineKeyboardButton(text="Cʀᴇᴅɪᴛ", callback_data="innexia_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="innexia_back"),
@@ -453,8 +449,8 @@ def innexia_about_callback(update, context):
                     InlineKeyboardButton(text="Fᴇᴅ", url="t.me/SiderzFedChat"),
                  ],
                  [
-                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/SiderzChat"),
-                    InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/SiderzBot"),
+                    InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="https://t.me/TechInfoByte"),
+                    InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/Tech_InfoByte"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="innexia_basichelp"),
@@ -471,7 +467,7 @@ def innexia_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Sᴀᴍᴍʏ", url="t.me/useIes"),
+                    InlineKeyboardButton(text="ᴢᴀɪᴅ", url="t.me/Timesisnotwaiting"),
                     InlineKeyboardButton(text="Bʟᴀᴢᴇ", url="t.me/piroXpower"),
                  ],
                  [
@@ -492,8 +488,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..😻 I'm *Innexia*
-                 \nHere is the [🔥Source Code🔥](https://github.com/DarkCybers/innexiaBot) .""",
+            text=""" Hi..😻 I'm *ᴛᴇᴀᴄʜɪɴꜰᴏ*
+                 \nHere is the [🔥ꜱᴜᴘᴘᴏʀᴛ🔥](https://t.me/Tech_InfoByte) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
