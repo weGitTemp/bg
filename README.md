@@ -1,4 +1,4 @@
-<h1 align="center"><b> ⚡ Teach InfoByte ⚡ </b></h1>
+<h1 align="center"><b> ⚡ Tech InfoByte ⚡ </b></h1>
 
 <h4 align="center">A Powerful, Smart And Simple Group Manager <br> ... Written with AioGram , Pyrogram and Telethon...</h4>
 
